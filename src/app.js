@@ -13,7 +13,7 @@ export class WalletConnector extends React.Component {
         this.setupValues();
     }
 
-    csetupValues = () => {
+    setupValues = () => {
         const providerOptions = {
             walletconnect: {
                 package: WalletConnectProvider,
