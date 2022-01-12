@@ -1,3 +1,108 @@
-body {
-  background: rgba(0, 0, 0, 0.35);
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-lightbox {
+  transition: opacity 0.1s ease-in-out 0s;
+  text-align: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin-left: -50vw;
+  top: 0px;
+  left: 50%;
+  z-index: 2;
+  will-change: opacity;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background: #fff;
+  position: relative;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  margin: 10px;
+  padding: 0px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  max-width: 800px;
+  min-width: fit-content;
+  max-height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 40px;
+}
+
+.mint-label {
+  margin: 0.7em 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mint-text {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 0.7em;
+}
+
+.mint-select {
+  background: white;
+  border-radius: 12px;
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 68px;
+  line-height: 20px;
+  padding: 14px 20px;
+  min-height: 40px;
+}
+
+.mint-btn {
+  transition: all 0.15s ease-in-out 0s;
+  position: relative;
+  line-height: 1em;
+  background-image: none;
+  outline: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(225deg, rgb(88, 98, 245) 0%, rgb(91, 62, 229) 100%);
+  border: none;
+  color: rgb(255, 255, 255);
+  box-shadow: rgb(50 50 93 / 11%) 0px 4px 6px 0px, rgb(0 0 0 / 8%) 0px 1px 3px 0px,
+    rgb(0 0 0 / 6%) 0px 0px 1px 0px inset;
+  border-radius: 32px;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 8px 12px;
+  cursor: pointer;
+  will-change: transform;
+  max-width: 200px;
+}
+
+.mint-btn:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: rgb(50 50 93 / 10%) 0px 7px 14px 0px, rgb(0 0 0 / 8%) 0px 3px 6px 0px,
+    rgb(0 0 0 / 6%) 0px 0px 1px 0px inset;
 }

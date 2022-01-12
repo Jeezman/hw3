@@ -7,7 +7,7 @@ import WalletConnectProvider from '@walletconnect/web3-provider';
 
 export class WalletConnector extends React.Component {
     constructor() {
-        super(props);
+        super();
         this.web3Modal = null;
         this.provider = null;
         this.setupValues();
@@ -30,6 +30,10 @@ export class WalletConnector extends React.Component {
         });
     };
 
+    componentDidMount() {
+        this.handleOnClick()
+    }
+
     handleOnClick = async () => {
         this.provider = await this.web3Modal.connect();
     };
@@ -37,6 +41,6 @@ export class WalletConnector extends React.Component {
     render = () => {
         const { children } = this.props;
 
-        return <div onClick={this.handleOnClick}>{children}</div>;
+        return <div></div>
     };
 }
