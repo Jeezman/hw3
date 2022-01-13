@@ -7,12 +7,11 @@
     "dist/**/*"
   ],
   "scripts": {
-    "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "wp --mode production",
     "start": "wp --mode development",
     "prepublishOnly": "npm run build",
-    "version": "npm run format && git add -A src",
+    "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": {

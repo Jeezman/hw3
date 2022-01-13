@@ -23,7 +23,10 @@ module.exports = {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         library: "hangWeb3",
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        libraryExport: 'default',
+        umdNamedDefine: true,
+        globalObject: 'this'
     },
     module: {
         rules: [
