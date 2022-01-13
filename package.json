@@ -2,43 +2,49 @@
   "name": "hang-web3-connect",
   "version": "1.0.0",
   "description": "Hang web3 connect",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
+    "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "wp --mode production",
-    "start": "wp --mode development"
+    "start": "wp --mode development",
+    "prepublishOnly": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeezman/hang-conn.git"
+    "url": "https://github.com/Agoratix/hang-wallet-connect"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jeezman/hang-conn/issues"
+    "url": "https://github.com/Agoratix/hang-wallet-connect/issues"
   },
-  "homepage": "https://github.com/Jeezman/hang-conn#readme",
-  "dependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.7",
-    "@babel/preset-react": "^7.16.7",
+  "homepage": "https://github.com/Agoratix/hang-wallet-connect",
+  "devDependencies": {
     "@walletconnect/web3-provider": "^1.6.6",
-    "babel-loader": "^8.2.3",
+    "file-loader": "^6.2.0",
+    "webpack-cli": "^4.9.1",
     "css-loader": "^5.2.7",
+    "express": "^4.17.2",
     "mini-html-webpack-plugin": "^3.1.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "style-loader": "^2.0.0",
     "web3": "^1.6.0",
     "web3modal": "^1.9.4",
     "webpack": "^4.43.0",
     "webpack-merge": "^5.8.0",
     "webpack-nano": "^1.1.1",
-    "webpack-plugin-serve": "^1.5.0"
-  },
-  "devDependencies": {
-    "file-loader": "^6.2.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-plugin-serve": "^1.5.0",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

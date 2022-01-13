@@ -33,12 +33,6 @@ function Page({ id }) {
     </div>
 }
 
-const element = document.createElement('div');
-element.setAttribute("id", "hang-app-connect")
-document.body.appendChild(element)
-ReactDOM.render(
-    <div>
-        <Page id="boom" />
-    </div>, document.getElementById("hang-app-connect"));
+export default Page;
 
 
