@@ -6,19 +6,8 @@ const { WebpackPluginServe } = require("webpack-plugin-serve");
 
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/index.js',
-    devtool: 'inline-source-map',
-    // devServer: {
-    //     static: './dist',
-    // },
-    // watch: true,
-    // plugins: [new MiniHtmlWebpackPlugin({ context: { title: 'Hang web 3' } }), new WebpackPluginServe({
-    //     port: process.env.PORT || 8080,
-    //     static: "./dist",
-    //     liveReload: true,
-    //     waitForBuild: true,
-    // })],
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
