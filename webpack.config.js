@@ -12,17 +12,18 @@ module.exports = {
     // devServer: {
     //     static: './dist',
     // },
-    watch: true,
-    plugins: [new MiniHtmlWebpackPlugin({ context: { title: 'Hang web 3' } }), new WebpackPluginServe({
-        port: process.env.PORT || 8080,
-        static: "./dist",
-        liveReload: true,
-        waitForBuild: true,
-    })],
+    // watch: true,
+    // plugins: [new MiniHtmlWebpackPlugin({ context: { title: 'Hang web 3' } }), new WebpackPluginServe({
+    //     port: process.env.PORT || 8080,
+    //     static: "./dist",
+    //     liveReload: true,
+    //     waitForBuild: true,
+    // })],
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         library: "hangWeb3",
+        libraryTarget: 'umd'
     },
     module: {
         rules: [

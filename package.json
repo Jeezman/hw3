@@ -1,7 +1,7 @@
 {
-  "name": "hang-web3-connect",
+  "name": "hw3",
   "version": "1.0.0",
-  "description": "Hang web3 connect",
+  "description": "Hw3",
   "main": "dist/index.js",
   "files": [
     "dist/**/*"
@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Agoratix/hang-wallet-connect"
+    "url": "https://github.com/Jeezman/hw3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Agoratix/hang-wallet-connect/issues"
+    "url": "https://github.com/Jeezman/hw3/issues"
   },
-  "homepage": "https://github.com/Agoratix/hang-wallet-connect",
+  "homepage": "https://github.com/Jeezman/hw3",
   "devDependencies": {
     "@walletconnect/web3-provider": "^1.6.6",
     "file-loader": "^6.2.0",
